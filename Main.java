@@ -53,6 +53,10 @@ public class Main {
                     if (arr[arrPos] == 0) {
                         pos = end;
                     }
+                    if (end == -1) {
+                        System.err.println("Error: Unclosed loop at pos " + loopPos);
+                        break;
+                    }
                 } else if (c == ']') {
                     pos = loopPos - 1;
                 }
@@ -70,5 +74,6 @@ public class Main {
                 System.out.print(arr[i] + " ");
             }
         }
+      System.out.println("\nAddress Range: 0 - " + maxArrPos);
     }
 }
